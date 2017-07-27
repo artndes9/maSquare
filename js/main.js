@@ -30,7 +30,8 @@ $(document).ready(function(){
     $serviceLogo.hover(
         function(){
             console.log($(this).find('.wrap>.icon'));
-            TweenMax.fromTo($(this).children('.wrap>.icon'), .8, {scale: 1.5, opacity : 0}, {scale:1, opacity:1});
+            $(this).toggleClass("active");
+            // TweenMax.fromTo($(this).children('.wrap>.icon'), .8, {scale: 1.5, opacity : 0}, {scale:1, opacity:1});
         }
     );
 });
