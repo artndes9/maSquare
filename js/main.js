@@ -25,4 +25,13 @@ $(document).ready(function(){
         TweenMax.staggerFromTo(slide, 1, {opacity: 0, y: 80}, {opacity: 1, y:0}, 0.2)
     }
     tween($('.owl-item.active .text').children());
+
+    var $serviceLogo = $('.serviceItem');
+    $serviceLogo.hover(
+        function(){
+            console.log($(this).find('.wrap>.icon'));
+            $(this).toggleClass("active");
+            // TweenMax.fromTo($(this).children('.wrap>.icon'), .8, {scale: 1.5, opacity : 0}, {scale:1, opacity:1});
+        }
+    );
 });
