@@ -53,3 +53,16 @@ div.owl-carousel {
 }
 
 .owl-item.active .text {}
+
+section.homeServices{
+    position: relative;
+    text-align: center;
+}
+.homeServices .col{
+    padding: .8rem;
+    background-color: #fafafa;
+    border-right: 1px solid #eeeeee;
+}
+.homeServices .col .wrap{
+    vertical-align: baseline;
+}
