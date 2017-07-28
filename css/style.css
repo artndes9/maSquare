@@ -27,6 +27,31 @@ section {
     top: 25px;
 }
 
+@media screen and (min-width: 768px) {
+    .header .navbar-brand .logo {
+        transition: all 0.5s ease;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header .container {
+        padding: 0;
+    }
+    .header .navbar-brand {
+        padding-top: 0.9rem;
+        padding-bottom: 0.9rem;
+    }
+    .header .navbar-brand .logo {
+        width: 75px;
+        top: 35px;
+    }
+}
+
+.header .navbar.fixed-top .navbar-brand .logo {
+    width: 90px;
+    top: 33px;
+}
+
 .header .header-info .contact-info {
     font-size: 1.2rem;
     padding: 5px 0 0 15px;
@@ -54,14 +79,49 @@ section {
     margin-right: 10px;
 }
 
+@media screen and (min-width: 768px) {
+    .navbar {
+        transition: width 0.5s ease;
+    }
+}
+
+.navbar-light .navbar-toggler {
+    margin-top: 5px;
+}
+
+.navbar.fixed-top {
+    background-color: #fff;
+    border-bottom: 1px solid #f3f3f3;
+}
+
 .navbar .navbar-nav .nav-link {
     font-weight: bold;
     font-size: 1rem;
     text-transform: uppercase;
-    padding-right: 1rem;
-    padding-left: 1rem;
     position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
     color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        background-color: #fff;
+    }
+    .navbar.navbar.fixed-top {
+        position: relative;
+    }
+    .navbar .navbar-nav .nav-link {
+        color: #111111;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar.fixed-top .navbar-nav .nav-link {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #111111;
+    }
 }
 
 .navbar .navbar-nav .nav-link.active {
@@ -80,10 +140,36 @@ section {
     transition: all 0.2s ease;
 }
 
-.navbar .navbar-nav .nav-link.active:before,
-.navbar .navbar-nav .nav-item:hover .nav-link:before {
-    left: 5px;
-    right: 5px;
+@media screen and (max-width: 767px) {
+    .navbar .navbar-nav .nav-item .nav-link:before,
+    .navbar.fixed-top .navbar-nav .nav-item .nav-link:before,
+    .navbar .navbar-nav .nav-item .nav-link.active:before {
+        width: 2px;
+        top: 50%;
+        bottom: 50%;
+        left: -3px;
+        height: auto;
+    }
+    .navbar .navbar-nav .nav-item .nav-link.active:before,
+    .navbar .navbar-nav .nav-item:hover .nav-link:before {
+        top: 3px;
+        bottom: 3px;
+    }
+    .navbar .navbar-collapse {
+        margin-top: 15px;
+    }
+}
+
+.navbar.fixed-top .navbar-nav .nav-link:before {
+    top: -6px;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar .navbar-nav .nav-link.active:before,
+    .navbar .navbar-nav .nav-item:hover .nav-link:before {
+        left: 5px;
+        right: 5px;
+    }
 }
 
 .header .backdrop-image {
@@ -180,6 +266,12 @@ section {
     font-size: 1.1rem;
 }
 
+@media screen and (max-width: 767px) {
+    .main .contact-page-description .features p {
+        padding: 0 1.2rem 2rem;
+    }
+}
+
 .contact-info-map {
     margin-top: 72px;
 }
@@ -201,6 +293,16 @@ section {
 .contact-info-map .map,
 .contact-info-map .address {
     height: 100vh;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-info-map .map {
+        height: 50vh;
+    }
+    .contact-info-map .address {
+        height: auto;
+        padding-bottom: 100px;
+    }
 }
 
 .contact-info-map .address {
@@ -247,6 +349,14 @@ section {
     padding: 12px 0;
     border: none;
     outline: none;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-form .input-group .form-control,
+    .contact-form .input-group .btn-submit {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
 }
 
 .contact-form .input-group .btn-submit:focus {
@@ -299,25 +409,29 @@ div.owl-carousel {
 
 .owl-item.active .text {}
 
-section.homeServices{
+section.homeServices {
     position: relative;
     text-align: center;
 }
-.homeServices .col{
+
+.homeServices .col {
     padding: .8rem;
     background-color: #fafafa;
     border-right: 1px solid #eeeeee;
 }
-.homeServices .col .wrap{
+
+.homeServices .col .wrap {
     vertical-align: baseline;
 }
-.icon{
+
+.icon {
     position: relative;
     height: 5rem;
     width: 5rem;
-    margin: auto;    
+    margin: auto;
 }
-.icon:after{
+
+.icon:after {
     position: absolute;
     content: '';
     left: 0;
@@ -329,23 +443,28 @@ section.homeServices{
     opacity: 0;
     transform: scale(1.4);
 }
-.serviceItem.active .icon:after{
+
+.serviceItem.active .icon:after {
     opacity: 1;
     transform: scale(1);
-    transition: all .2s; 
+    transition: all .2s;
 }
-.serviceItem.active .material-icons{
+
+.serviceItem.active .material-icons {
     color: #fff
 }
-.icon>.material-icons{
+
+.icon>.material-icons {
     position: relative;
     top: calc(50% - 12px);
     z-index: 100;
 }
-section.features{
+
+section.features {
     text-align: center;
 }
-section.features .background{
+
+section.features .background {
     background: url('http://placehold.it/1024x700') no-repeat center;
     background-size: cover;
 }
@@ -363,6 +482,7 @@ section.features .background{
     font-size: 1.4rem;
     letter-spacing: 0.15rem;
     color: #aaaaaa;
+    margin-bottom: 15px;
 }
 
 .footer .container-fluid.footer-links,
