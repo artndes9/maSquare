@@ -36,6 +36,7 @@ $(document).ready(function(){
     );
 
 
+    var rellax = new Rellax('.rellax');
 
     $(window).on('scroll', function(e) {
 
