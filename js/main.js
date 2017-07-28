@@ -34,4 +34,19 @@ $(document).ready(function(){
             // TweenMax.fromTo($(this).children('.wrap>.icon'), .8, {scale: 1.5, opacity : 0}, {scale:1, opacity:1});
         }
     );
+
+
+
+    $(window).on('scroll', function(e) {
+
+        if( $(this).scrollTop()  > 32) {
+            $('body').addClass('fixed-nav');
+            $('.navbar').addClass('fixed-top');
+        } else {
+            $('body').removeClass('fixed-nav');            
+            $('.navbar').removeClass('fixed-top');
+        }
+
+    });
+
 });
