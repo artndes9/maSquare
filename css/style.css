@@ -173,11 +173,11 @@ section {
 }
 
 .header .backdrop-image {
-    background: url(../images/contact-bg.jpg);
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     position: absolute;
     top: 0;
     z-index: -1;
@@ -203,6 +203,87 @@ section {
 
 .main {
     margin-top: 100vh;
+}
+
+.main .page-title {
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.services-page .main .container {
+    padding-top: 30px;
+}
+
+.services-page .main .features {
+    background-color: #dedede;
+    text-align: left;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+.services-page .main .features .seperator {
+    margin-bottom: 30px;
+}
+
+.services-page .main .features p {
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    column-count: 2;
+    column-gap: 90px;
+    margin-bottom: 50px;
+}
+
+.services-page .main .page-title {
+    margin-bottom: 25px;
+}
+
+.services-page .main .page-description p {
+    font-size: 1.2rem;
+    column-count: 2;
+    column-gap: 90px;
+}
+
+@media screen and (max-width: 767px) {
+    .services-page .main .follow-us {
+        margin-bottom: 30px;
+    }
+}
+
+.services-page .main .follow-us .seperator {
+    margin-bottom: 30px;
+}
+
+.services-page .main .follow-us .social-links {
+    list-style: none;
+    display: flex;
+}
+
+.services-page .main .follow-us .social-links li {
+    display: inline-block;
+    position: relative;
+    flex: 1;
+}
+
+.services-page .main .follow-us .social-links li a {
+    background-color: #f1f1f1;
+    width: 5rem;
+    height: 5rem;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    color: #111111;
+}
+
+.services-page .main .follow-us .social-links li a:hover {
+    color: #EDA924;
+}
+
+.services-page .main .follow-us .social-links li .fa {
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .main .contact-page-description {
@@ -390,7 +471,7 @@ section {
     background-color: #EDA924;
     z-index: 100;
     box-sizing: border-box;
-    transition: all 0.25s ease;
+    transition: all 0.5s ease;
 }
 
 .contact-form .input-group .border-decorator:nth-of-type(1):before,
