@@ -375,6 +375,87 @@ section {
     color: #efefef;
 }
 
+.contact-form .input-group .border-decorator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.contact-form .input-group .border-decorator:before,
+.contact-form .input-group .border-decorator:after {
+    content: "";
+    position: absolute;
+    background-color: #EDA924;
+    z-index: 100;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+
+.contact-form .input-group .border-decorator:nth-of-type(1):before,
+.contact-form .input-group .border-decorator:nth-of-type(1):after {
+    height: 1px;
+}
+
+.contact-form .input-group .border-decorator:nth-of-type(1):before {
+    top: 0;
+    left: 45px;
+    right: 100%;
+}
+
+.contact-form .input-group .border-decorator:nth-of-type(1):after {
+    bottom: 0;
+    right: 45px;
+    left: 100%;
+}
+
+.contact-form .input-group .border-decorator:nth-of-type(2):before,
+.contact-form .input-group .border-decorator:nth-of-type(2):after {
+    width: 1px;
+}
+
+.contact-form .input-group .border-decorator:nth-of-type(2):before {
+    top: 100%;
+    left: 45px;
+    bottom: 0;
+}
+
+.contact-form .input-group .border-decorator:nth-of-type(2):after {
+    top: 0;
+    bottom: 100%;
+    right: 45px;
+}
+
+.contact-form .input-group .form-control:focus~.border-decorator:nth-of-type(1):before {
+    right: 45px;
+}
+
+.contact-form .input-group .form-control:focus~.border-decorator:nth-of-type(1):after {
+    left: 45px;
+}
+
+.contact-form .input-group .form-control:focus~.border-decorator:nth-of-type(2):before {
+    top: 0;
+}
+
+.contact-form .input-group .form-control:focus~.border-decorator:nth-of-type(2):after {
+    bottom: 0;
+}
+
+@media screen and (min-width:768px) {
+    .contact-form .input-group .border-decorator:nth-of-type(1):before,
+    .contact-form .input-group .border-decorator:nth-of-type(2):before,
+    .contact-form .input-group .form-control:focus~.border-decorator:nth-of-type(1):after {
+        left: 15px;
+    }
+    .contact-form .input-group .border-decorator:nth-of-type(1):after,
+    .contact-form .input-group .border-decorator:nth-of-type(2):after,
+    .contact-form .input-group .form-control:focus~.border-decorator:nth-of-type(1):before {
+        right: 15px;
+    }
+}
+
 div.owl-carousel {
     position: relative;
     height: 100%;
