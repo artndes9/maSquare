@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "Hello WOrld"
 gitLastCommit=$(git show --summary --grep="Merge pull request")
 if [[ -z "$gitLastCommit" ]]
 then
