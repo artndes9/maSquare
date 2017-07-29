@@ -6,4 +6,5 @@ branches:
   only:
     - master
 after_success:
+  - chmod +x deploy.sh
   - ./deploy.sh 
