@@ -203,6 +203,7 @@ section {
 
 .main {
     margin-top: 100vh;
+    background-color: #fff;
 }
 
 .main .page-title {
@@ -211,7 +212,7 @@ section {
 }
 
 .services-page .main .container {
-    padding-top: 30px;
+    padding-top: 80px;
 }
 
 .services-page .main .features {
@@ -288,6 +289,7 @@ section {
 
 .main .contact-page-description {
     text-align: center;
+    padding-top: 80px;
 }
 
 .main .contact-page-description h1,
