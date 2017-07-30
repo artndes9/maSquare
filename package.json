@@ -1,0 +1,8 @@
+{
+  "name": "masquare",
+  "description": "MA Square",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "node test.js"
+  }
+}
