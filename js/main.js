@@ -38,7 +38,6 @@ $(document).ready(function(){
     TweenMax.set($('.featureDescription'), {y:100});
     $featureItem.hover(
         function(){
-            // $(this).toggleClass("active");
             TweenMax.to($(this).find('.featureIcon'), .4, {y:0}),
             TweenMax.to($(this).find('.material-icons'), .4, {color:'#fff'}),
             TweenMax.to($(this).find('.featureDescription'), .4, {y:0, scale:1})
