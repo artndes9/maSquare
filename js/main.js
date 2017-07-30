@@ -48,4 +48,20 @@ $(document).ready(function(){
             TweenMax.to($(this).find('.featureDescription'), .4, {y:100, scale:0})
         }
     );
+
+
+    var rellax = new Rellax('.rellax');
+
+    $(window).on('scroll', function(e) {
+
+        if( $(this).scrollTop()  > 32) {
+            $('body').addClass('fixed-nav');
+            $('.navbar').addClass('fixed-top');
+        } else {
+            $('body').removeClass('fixed-nav');            
+            $('.navbar').removeClass('fixed-top');
+        }
+
+    });
+
 });
