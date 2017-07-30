@@ -94,3 +94,20 @@ section.features .background{
     background: url('http://placehold.it/1024x700') no-repeat center;
     background-size: cover;
 }
+.featureList{
+    background: url('../assets/bg.jpg')
+}
+.featureItem{
+    min-height: 200px;
+    /* background: #88ff11; */
+    border: 1px solid #aaa;
+}
+.featureItem .featureIcon{
+    position: relative;
+}
+.featureItem .featureDescription{
+    transform: scale(0);
+}
+.featureItem.active .featureDescription{
+    transform: scale(1);
+}

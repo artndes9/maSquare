@@ -31,7 +31,21 @@ $(document).ready(function(){
         function(){
             console.log($(this).find('.wrap>.icon'));
             $(this).toggleClass("active");
-            // TweenMax.fromTo($(this).children('.wrap>.icon'), .8, {scale: 1.5, opacity : 0}, {scale:1, opacity:1});
+        }
+    );
+    var $featureItem = $('.featureItem');
+    TweenMax.set($('.featureIcon'), {y:50});
+    TweenMax.set($('.featureDescription'), {y:100});
+    $featureItem.hover(
+        function(){
+            // $(this).toggleClass("active");
+            TweenMax.to($(this).find('.featureIcon'), .4, {y:0}),
+            TweenMax.to($(this).find('.material-icons'), .4, {color:'#fff'}),
+            TweenMax.to($(this).find('.featureDescription'), .4, {y:0, scale:1})
+        },function(){
+            TweenMax.to($(this).find('.featureIcon'), .4, {y:50}),
+            TweenMax.to($(this).find('.material-icons'), .4, {color:''}),
+            TweenMax.to($(this).find('.featureDescription'), .4, {y:100, scale:0})
         }
     );
 });
