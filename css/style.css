@@ -632,24 +632,28 @@ section.features .background {
     background: url('http://placehold.it/1024x700') no-repeat center;
     background-size: cover;
 }
-<<<<<<< HEAD
-.featureList{
+
+.featureList {
     background: url('../assets/bg.jpg')
 }
-.featureItem{
+
+.featureItem {
     min-height: 200px;
     /* background: #88ff11; */
     border: 1px solid #aaa;
 }
-.featureItem .featureIcon{
+
+.featureItem .featureIcon {
     position: relative;
 }
-.featureItem .featureDescription{
+
+.featureItem .featureDescription {
     transform: scale(0);
 }
-.featureItem.active .featureDescription{
+
+.featureItem.active .featureDescription {
     transform: scale(1);
-=======
+}
 
 .footer .container-fluid {
     background-color: #181818;
@@ -714,5 +718,4 @@ section.features .background {
 
 .footer .container-fluid.copyright-credits .copyright {
     text-align: right;
->>>>>>> 71e74367a2067029947b40573e12b4da0570d9fb
 }
