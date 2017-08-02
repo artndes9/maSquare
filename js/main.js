@@ -34,6 +34,7 @@ $(document).ready(function(){
         }
     );
     var $featureItem = $('.featureItem');
+    var $teamMate = $('.teammate');
     TweenMax.set($('.featureIcon'), {y:50});
     TweenMax.set($('.featureDescription'), {y:100});
     $featureItem.hover(
@@ -45,6 +46,17 @@ $(document).ready(function(){
             TweenMax.to($(this).find('.featureIcon'), .4, {y:50}),
             TweenMax.to($(this).find('.material-icons'), .4, {color:''}),
             TweenMax.to($(this).find('.featureDescription'), .4, {y:100, scale:0})
+        }
+    );
+    $teamMate.hover(
+        function(){
+            TweenMax.to($(this).find('.teammateImg .overlay'), 1, {y:'0%', opacity:1}),
+            TweenMax.staggerTo($(this).find('.teammateDetails').children(), .4, {y:-100, color:'#fff'}, .2),
+            TweenMax.to($(this).find('.teammateAbout'), .8, {y:-50, opacity:1})
+        },function(){
+            TweenMax.to($(this).find('.teammateImg .overlay'), .4, {y:'-50%', opacity:0}),
+            TweenMax.staggerTo($(this).find('.teammateDetails').children(), .4, {y:0, color:''}, .2),
+            TweenMax.to($(this).find('.teammateAbout'), .4, {y:-100, opacity:0})
         }
     );
 
