@@ -6,10 +6,10 @@ html {
     letter-spacing: 0.2ch;
 }
 
-body,
+html, body,
 section {
     position: relative;
-    font-family: "Raleway";
+    font-family: 'Raleway', sans-serif;
 }
 
 .seperator {
@@ -589,12 +589,16 @@ background-size: cover;
     transform: translate(-50%);
     width: 60%;
 }
-
-.owl-item .slide .text h1,
-.owl-item .slide .text h4 {
+.text h1,.text h2,.text h4 {
     position: relative;
-    font-weight: bold;
-    padding: 15px 0;
+    line-height: 3;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+.text h1{
+    font-family: 'Raleway', 'sans-serif';
+
 }
 .caption {
     font-style: italic;
