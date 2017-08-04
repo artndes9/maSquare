@@ -16,8 +16,133 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/28e42a4b37.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
+    <style>
+	.menu {
+		position: relative;
+		z-index: 10;
+	}
 
+	.menu__item {
+		position: relative;
+		display: block;
+		outline: none;
+		margin: 0 0 0.5em;
+		line-height: 1.0;
+	}
+	
+	.menu__item-name,
+	.menu__item-label {
+		position: relative;
+		display: inline-block;
+	}
+	
+	.menu__item-name {
+		font-size: 1.25em;
+	}
+	
+	.menu__item-label {
+		margin: 0 0 0 1.5em;
+	}
+	.menu--adsila {
+		font-size: 1.15em;
+		font-family: 'Nunito', sans-serif;
+	}
+	
+	.menu--adsila a {
+		color: #272727;
+	}
+	
+	.menu--adsila .menu__item {
+		margin: 0 0 0.5em;
+	}
+	
+	.menu--adsila .menu__item-name {
+		padding: 0 0.35em;
+		font-weight: bold;
+		line-height: 1.0;
+		transition: color 0.5s;
+		transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+	}
+	
+	.menu--adsila .menu__item-name::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 50%;
+		left: 0;
+		bottom: 0;
+		opacity: 0.3;
+		transform: scale3d(0,1,1);
+		transform-origin: 0% 50%;
+		transition: transform 0.5s;
+		transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+	}
+	
+	.menu--adsila .menu__item-label {
+		font-size: 1em;
+		letter-spacing: 0.05em;
+		transform: translate3d(-0.5em,0,0);
+		transition: transform 0.5s, color 0.5s;
+		transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+	}
+	
+	.menu--adsila .menu__item-label::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		width: 25%;
+		height: 1px;
+		left: 0.05em;
+		top: 1.25em;
+		opacity: 0.3;
+		transform: scale3d(0,1,1);
+		transform-origin: 100% 50%;
+		transition: transform 0.5s;
+		transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+	}
+	
+	.menu--adsila .menu__item:nth-child(odd) .menu__item-name::before,
+	.menu--adsila .menu__item:nth-child(odd) .menu__item-label::before {
+		background: #EDA924;
+	}
+	
+	.menu--adsila .menu__item:nth-child(even) .menu__item-name::before,
+	.menu--adsila .menu__item:nth-child(even) .menu__item-label::before  {
+		background: #6265fe;
+	}
+	
+	/* Hover */
+	
+	.menu--adsila .menu__item:nth-child(odd):hover,
+	.menu--adsila .menu__item:nth-child(odd):focus {
+		color: #EDA924;
+	}
+	
+	.menu--adsila .menu__item:nth-child(even):hover,
+	.menu--adsila .menu__item:nth-child(even):focus {
+		color: #6265fe;
+	}
+	
+	.menu--adsila .menu__item:hover .menu__item-name::before,
+	.menu--adsila .menu__item:focus .menu__item-name::before,
+	.menu--adsila .menu__item:hover .menu__item-label::before,
+	.menu--adsila .menu__item:focus .menu__item-label::before {
+		transform: scale3d(1,1,1);
+	}
+	
+	.menu--adsila .menu__item:hover .menu__item-label,
+	.menu--adsila .menu__item:focus .menu__item-label {
+		transform: translate3d(0,0,0);
+	}
+	
+	.menu--adsila .menu__item:hover .menu__item-label::before,
+	.menu--adsila .menu__item:focus .menu__item-label::before {
+		transition-timing-function: ease;
+		transform-origin: 0% 50%;
+	}
+    </style>
+</head>
 <body class="services-page">
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
@@ -67,16 +192,16 @@
 
                 <div class="collapse navbar-collapse" id="main-nav">
                     <ul class="navbar-nav mr-auto hidden-md-up">
-                        <li class="nav-item"><a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a></li>
                         <li class="nav-item"><a class="nav-link" href="#">HR</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Content Writing</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="#">Clients</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </nav>
@@ -94,17 +219,57 @@
         <section class="container page-description">
             <div class="row">
                 <div class="col-md-4">
-                    <h1 class="page-title">HOW WE WORK?</h1>
-                    <div class="seperator"></div>
+                    <nav class="menu menu--adsila">
+                        <a class="menu__item" href="#">
+                            <span class="menu__item-name">Employee Acquisition</span>
+                            <span class="menu__item-label">Explore all artists' portfolios</span>
+                        </a><br>
+                        <a class="menu__item" href="#">
+                            <span class="menu__item-name">Talent Management</span>
+                            <span class="menu__item-label">Discover their stories</span>
+                        </a><br>
+                        <a class="menu__item" href="#">
+                            <span class="menu__item-name">Employee Engagement</span>
+                            <span class="menu__item-label">View our event calendar</span>
+                        </a><br>
+                        <a class="menu__item" href="#">
+                            <span class="menu__item-name">Compenstion and Benefits</span>
+                            <span class="menu__item-label">Read our mission statement</span>
+                        </a><br>
+                        <a class="menu__item" href="#">
+                            <span class="menu__item-name">Employee Compliance</span>
+                            <span class="menu__item-label">Get to know our eco village</span>
+                        </a><br>
+                        <a class="menu__item" href="#">
+                            <span class="menu__item-name">BPO and KPO Services</span>
+                            <span class="menu__item-label">Purchase event tickets online</span>
+                        </a><br>
+                        <a class="menu__item" href="#">
+                            <span class="menu__item-name">HR and Business Analytics</span>
+                            <span class="menu__item-label">Get in touch and find us</span>
+                        </a><br>
+                        <a class="menu__item" href="#">
+                            <span class="menu__item-name">Content Writing and Creation</span>
+                            <span class="menu__item-label">Indivisual and Company Branding</span>
+                        </a>
+        			</nav>
+
                 </div>
                 <div class="col-md-8">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta lacus eu magna pretium vehicula. Proin varius quam at turpis mollis faucibus. Nunc ultrices, magna nec facilisis ullamcorper, tortor felis venenatis ipsum, vel finibus velit quam non lorem.
-                        Maecenas eget diam ex. Pellentesque ut eros vel diam sollicitudin laoreet elementum eget urna. Nam tempor nec ipsum vel tempor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus quis
-                        nisl vestibulum, tempus augue quis, blandit tortor. <br><br> Duis aliquam nec ipsum at mattis. Suspendisse potenti. Sed eu dolor et mi fringilla sollicitudin. Maecenas urna mi, consectetur vitae eleifend
-                        ut, volutpat tempor turpis. Vestibulum in viverra odio. Curabitur consequat sodales augue, ut auctor enim fermentum quis. Suspendisse molestie nisi a sapien dictum, sit amet efficitur dui pharetra. Cras luctus fermentum sollicitudin.
-                        Nulla turpis tortor, efficitur vel congue eu, tristique id tellus. Cras vulputate fringilla enim vel dignissim. Aenean vel felis odio. Phasellus et sapien dictum, blandit orci non, iaculis lorem.
-                    </p>
+                	<div class="row" id="emp-a">
+                    	<div class="col-md-6">
+                         <h2>Employee Acquisition</h2>
+                       	</div> 
+                        <div class="col-md-6">
+                        <ul style="margin-top:3em; font-size:16px; alignment-adjust:auto;">
+              		         <li>Strategic Recruitment-pre-recruitment support</li>
+                           	 <li>Candidate Selection Assesment</li>
+                           	 <li>Interview and Selection Process - as an outsourced function</li>
+                	         <li>Employee On-boarding and Induction</li>
+               				 <li>Employee Orientation Programmes</li>
+                        </ul>
+                    	</div>
+                  	</div>
                 </div>
             </div>
         </section>

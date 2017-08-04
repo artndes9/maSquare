@@ -538,18 +538,28 @@ section {
     }
 }
 /*Home*/
-div.owl-carousel {
+section{
+    padding-bottom: 5%;
+}
+div#homeCarousel {
     position: relative;
     height: 100%;
     width: 100%;
 }
 
-.owl-carousel .slide {
+#homeCarousel .slide {
     position: relative;
     width: 100%;
-    height: calc(100vh - 60px);
-    background: url('http://placehold.it/1920x700') no-repeat center;
+    height: 100vh;
     background-size: cover;
+}
+#homeCarousel .owl-item:nth-child(even) .slide{
+background: url('../assets/bgs.jpg') no-repeat center;
+background-size: cover;
+}
+#homeCarousel .owl-item:nth-child(odd) .slide{
+background: url('../assets/bgsa.jpg') no-repeat center;
+background-size: cover;
 }
 
 .slide .text {
@@ -563,6 +573,9 @@ div.owl-carousel {
 .text h1,
 .text h4 {
     position: relative;
+}
+.caption {
+    font-style: italic;
 }
 
 .owl-item {
@@ -578,9 +591,13 @@ section.homeServices {
 }
 
 .homeServices .col {
-    padding: .8rem;
+    padding: 5rem;
     background-color: #fafafa;
+    min-height: 200px;
     border-right: 1px solid #eeeeee;
+}
+.homeServices .col p{
+    text-align: justify;
 }
 
 .homeServices .col .wrap {
@@ -633,17 +650,24 @@ section.features .background {
 }
 
 .featureList {
-    background: url('../assets/bg.jpg')
+    background: url('../assets/blackback.png');
+    color: #fff;
 }
 
 .featureItem {
     min-height: 200px;
-    /* background: #88ff11; */
+    padding: 3%;
     border: 1px solid #aaa;
 }
 
 .featureItem .featureIcon {
     position: relative;
+}
+.featureIcon span{
+    font-size: 18px;
+}
+.featureIcon .material-icons{
+    color: #000000;
 }
 
 .featureItem .featureDescription {
@@ -699,7 +723,14 @@ section.team{
     list-style-type: none;
     display: inline-block;
 }
-
+.teammateSoc ul li a span.fa {
+    padding-left: 10px;
+    height: 24px;
+    color: #fff;
+}
+section.clients{
+    text-align: center;
+}
 .footer .container-fluid h2 {
     text-transform: uppercase;
     font-size: 1.4rem;
