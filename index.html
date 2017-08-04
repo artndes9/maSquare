@@ -15,7 +15,10 @@
 </head>
 
 <body>
-    <header class="header" style="position: relative;z-index:999;">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header class="header">
         <div class="container">
             <div class="row header-info hidden-md-down">
                 <div class="col contact-info">
@@ -27,58 +30,110 @@
                         <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                         <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                         <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                        <li><a href="#"><span class="fa fa-youtube"></span></a></li>
-                        <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
                     </ul>
                 </div>
             </div>
 
             <nav class="navbar navbar-toggleable-sm navbar-light">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarNavAltMarkup"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse hidden-md-down">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">HR</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Content Writing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="hr-management" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Content Writing
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="hr-management">
+                                <a class="dropdown-item" href="/content_writing_and_creation.html">Content Writing and Creation</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="hr-management" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            HR Management
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="hr-management">
+                                <a class="dropdown-item" href="#">Employee Acquisition</a>
+                                <a class="dropdown-item" href="#">Employee Engagement</a>
+                                <a class="dropdown-item" href="#">Employment Complaince</a>
+                                <a class="dropdown-item" href="#">Compensation &amp; Benifits</a>
+                                <a class="dropdown-item" href="#">Talent Management</a>
+                            </div>
+                        </li>
                     </ul>
                     <ul class="navbar-nav ml-auto hidden-md-up">
-                        <li class="nav-item"><a class="nav-link" href="#">Clients</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="hr-management" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="hr-management">
+                                <a class="dropdown-item" href="#">BPO &amp; KPO Services</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="hr-management" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Analytics
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="hr-management">
+                                <a class="dropdown-item" href="#">Business Analytics</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <a class="navbar-brand pull-md-6" href="/">
-                <img class="logo" src="assets/logo.png" alt="MA Square Logo">
-            </a>
+                    <img class="logo" src="assets/logo.png" alt="MA Square Logo">
+                </a>
 
                 <div class="collapse navbar-collapse" id="main-nav">
                     <ul class="navbar-nav mr-auto hidden-md-up">
-                        <li class="nav-item"><a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">HR</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Content Writing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="hr-management" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Content Writing
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="hr-management">
+                                <a class="dropdown-item" href="/content_writing_and_creation.html">Content Writing and Creation</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="hr-management" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            HR Management
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="hr-management">
+                                <a class="dropdown-item" href="#">Employee Acquisition</a>
+                                <a class="dropdown-item" href="#">Employee Engagement</a>
+                                <a class="dropdown-item" href="#">Employment Complaince</a>
+                                <a class="dropdown-item" href="#">Compensation &amp; Benifits</a>
+                                <a class="dropdown-item" href="#">Talent Management</a>
+                            </div>
+                        </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="#">Clients</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="hr-management" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="hr-management">
+                                <a class="dropdown-item" href="#">BPO &amp; KPO Services</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="hr-management" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Analytics
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="hr-management">
+                                <a class="dropdown-item" href="#">Business Analytics</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
-    </header>
-
-    <main>
-        <section class="slider" style="top: -95px;z-index: 1;">
+        <div class="backdrop-image slider rellax">
             <div class="owl-carousel owl-theme" id="homeCarousel">
                 <div class="slide" id="0">
                     <div class="text">
@@ -113,7 +168,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </header>
+
+    <main class="main">
         <section class="homeServices">
             <div class="row">
                 <div class="col serviceItem">
@@ -211,71 +269,69 @@
         <section class="team">
             <div class="container">
                 <h2>MEET THE TEAM</h2>
+                <div class="seperator"></div>
                 <h5>Get to know Us</h5>
                 <div class="row">
                     <div class="col teammate">
-                        <div class="teammateImg">
+                        <div class="image">
                             <div class="overlay"></div>
                             <img src="assets/teammate.jpg" alt="Team Member">
                         </div>
-                        <div class="teammateDetails">
-                            <h4 class="teammateName">LOREM IPSIUM</h4>
-                            <h5 class="teammatePosition">Writer</h5>
-                            <div class="teammateSoc">
+                        <div class="details">
+                            <h4 class="name">LOREM IPSIUM</h4>
+                            <h5 class="position">Writer</h5>
+                            <div class="socials">
                                 <ul>
                                     <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                     <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                                     <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-youtube"></span></a></li>
                                     <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
                                 </ul>
                             </div>
+                            <p class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias at, atque beatae blanditiis delectus deleniti deserunt eligendi error </p>
                         </div>
-                        <p class="teammateAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias at, atque beatae blanditiis delectus
-                            deleniti deserunt eligendi error </p>
                     </div>
+
                     <div class="col teammate">
-                        <div class="teammateImg">
+                        <div class="image">
                             <div class="overlay"></div>
                             <img src="assets/teammate.jpg" alt="Team Member">
                         </div>
-                        <div class="teammateDetails">
-                            <h4 class="teammateName">LOREM IPSIUM</h4>
-                            <h5 class="teammatePosition">Writer</h5>
-                            <div class="teammateSoc">
+                        <div class="details">
+                            <h4 class="name">LOREM IPSIUM</h4>
+                            <h5 class="position">Writer</h5>
+                            <div class="socials">
                                 <ul>
                                     <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                     <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                                     <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-youtube"></span></a></li>
                                     <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
                                 </ul>
                             </div>
+                            <p class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias at, atque beatae blanditiis delectus deleniti deserunt eligendi error </p>
                         </div>
-                        <p class="teammateAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias at, atque beatae blanditiis delectus
-                            deleniti deserunt eligendi error </p>
                     </div>
+
                     <div class="col teammate">
-                        <div class="teammateImg">
+                        <div class="image">
                             <div class="overlay"></div>
                             <img src="assets/teammate.jpg" alt="Team Member">
                         </div>
-                        <div class="teammateDetails">
-                            <h4 class="teammateName">LOREM IPSIUM</h4>
-                            <h5 class="teammatePosition">Writer</h5>
-                            <div class="teammateSoc">
+                        <div class="details">
+                            <h4 class="name">LOREM IPSIUM</h4>
+                            <h5 class="position">Writer</h5>
+                            <div class="socials">
                                 <ul>
                                     <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                     <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                                     <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-youtube"></span></a></li>
                                     <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
                                 </ul>
                             </div>
+                            <p class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias at, atque beatae blanditiis delectus deleniti deserunt eligendi error </p>
                         </div>
-                        <p class="teammateAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias at, atque beatae blanditiis delectus
-                            deleniti deserunt eligendi error </p>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -324,8 +380,6 @@
                             <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                             <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                             <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                            <li><a href="#"><span class="fa fa-youtube"></span></a></li>
-                            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 push-md-5 quick-links">
@@ -361,7 +415,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
-    <script src="js/CustomEase.js"></script>
+    <script type="text/javascript" src="js/rellax.js"></script>
     <script src="js/main.js"></script>
 
 </body>
